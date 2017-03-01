@@ -23,7 +23,7 @@ exports.handler = function(event, context, callback) {
     });
 
     phantom.on('exit', code => {
-        callback(null, new Buffer(data, 'base64'));
+        callback(null, data);
 
         // callback(null, 'fine!!');
     });
